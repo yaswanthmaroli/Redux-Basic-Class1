@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+Redux Toolkit steps
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## First step
 
-## Available Scripts
+1. npm install @reduxjs/toolkit
+2. npm install react-redux
 
-In the project directory, you can run:
+## Second Step
 
-### `npm start`
+create Folder Redux
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- on Inside Redux Create Store.js
+  .... code is on store.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Third Step
 
-### `npm test`
+- import store from store.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* import provider from react redux
 
-### `npm run build`
+* wrap App by <Provide store = {store}> on index.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Fourth Step
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Create Folder Feature inside Here example is Counter Project so Create folder Counter if Its Login then Create folder Login
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- import {createSlice} from '@reduxjs/toolkit
 
-### `npm run eject`
+- First create a initial Value of the state.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* export const CounterSlice here is CounterSlice because example is counter here CounterSlice contain three parameter one is name: here name is 'counter , initialState, and last reducers.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  and last export increment and decrement export as const
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  export CounterSlice.reducer as default
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Fifth Step
 
-## Learn More
+- import CounterSlice.reducer as CounterReducer from './features/counter/CounterSlice
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - inside store reducer store value counter:CounterReducer . here CounterReducer is stored in store therefore we can able to use CounterReducer everywhere on application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  ## Sixth Step
 
-### Code Splitting
+  create a file counter.js for counter screen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  code is on counter.js ..
